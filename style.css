@@ -34,7 +34,7 @@ body{
   /* Create two equal columns that floats next to each other */
   .column1 {
     float: left;
-    width: 12%;
+    width: 16%;
     padding: 3vw;
     margin-top: 0.5vw;
     margin-left: 0.5vw;
@@ -44,7 +44,7 @@ body{
   }
   .column2 {
     float: left;
-    width: 84%;
+    width: 80%;
     padding: 3vw;
     height: 100%;
     margin-top: 0.5vw;
