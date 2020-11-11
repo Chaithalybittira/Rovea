@@ -1,0 +1,240 @@
+nav {
+    padding: 1.5vw;
+    background-color: lightgoldenrodyellow;
+    text-align: right;
+    word-spacing: 2.6vw;
+    padding-right: 7vw;
+    font-size: 1vw;
+    padding-bottom: 2vw;
+  }
+  
+  .scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+  }
+  
+  .card {
+    display: inline-block;
+  }
+  
+  .img {
+    border-radius: 80%;
+  }
+  
+  .img1 {
+    border-radius: 0%;
+    float: left;
+  }
+  
+  body {
+    background-color: white;
+    margin: 0;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  
+  .column1 {
+    float: left;
+    width: 12%;
+    padding: 3vw;
+    margin-top: 0.5vw;
+    margin-left: 0.5vw;
+    background-color: #fdf6f6;
+    position: relative;
+  }
+  
+  .column2 {
+    float: left;
+    width: 84%;
+    padding: 3vw;
+    height: 100%;
+    margin-top: 0.5vw;
+    margin-left: 1vw;
+  }
+  
+  /* Clear floats after the columns */
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: -3vw;
+    padding: 0;
+    background-color: #fdf6f6;
+    height: 100%;
+    position: fixed;
+    overflow: auto;
+  }
+  
+  li a {
+    display: block;
+    color: #000;
+    padding: 1vw 2vw;
+    text-decoration: none;
+    margin-top: 1vw;
+  
+    &.active {
+      background-color: #4CAF50;
+      color: white;
+    }
+  
+    &:hover:not(.active) {
+      background-color: tan;
+      color: white;
+    }
+  }
+  
+  #myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 1vw 2vw;
+    background-repeat: no-repeat;
+    width: 40%;
+    font-size: 1vw;
+    margin: 1vw 15vw 1.5vw 24vw;
+    padding: 2vw 10vw 0vw 10vw;
+    border: 1px solid #ddd;
+  }
+  
+  #myUL {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  
+    li a {
+      border: 0.1vw solid #ddd;
+      margin-top: -1vw;
+  
+      /* Prevent double borders */
+      background-color: #f6f6f6;
+      margin: 0vw 30vw 0vw 20vw;
+      padding: 1vw;
+      text-decoration: none;
+      font-size: 1vw;
+      color: black;
+      display: block;
+  
+      &:hover:not(.header) {
+        background-color: #eee;
+      }
+    }
+  }
+  
+  .container {
+    overflow: hiddens;
+  }
+  
+  .filterDiv {
+    float: left;
+    background-color: tan;
+    color: #ffffff;
+    display: none;
+  
+    /* Hidden by default */
+    margin-top: initial;
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  
+  .btn {
+    margin-bottom: 1vw;
+    border-radius: 32vw;
+    outline: none;
+    padding: 0.7vw 1.5vw;
+    background-color: white;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: peachpuff;
+    }
+  
+    &.active {
+      background-color: lightgoldenrodyellow;
+      color: black;
+    }
+  }
+  
+  /* Add a light grey background on mouse-over */
+  
+  /* Add a dark background to the active button */
+  
+  .box {
+    -webkit-transition: background-color 1s ease-out;
+    -moz-transition: background-color 1s ease-out;
+    -o-transition: background-color 1s ease-out;
+    transition: background-color 1s ease-out;
+  
+    &:hover {
+      background-color: grey;
+      cursor: pointer;
+    }
+  }
+  
+  div.scrollmenu {
+    background-color: transparent;
+    overflow: auto;
+    white-space: nowrap;
+    word-spacing: 2vw;
+  
+    a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 1vw;
+      text-decoration: none;
+      word-spacing: 2vw;
+  
+      &:hover {
+        background-color: #777;
+      }
+    }
+  }
+  
+  .dropdown1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown1-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 32vw;
+    z-index: 1;
+  
+    a {
+      color: black;
+      padding: 1.5vw 4vw;
+      word-spacing: 0.02vw;
+      text-decoration: none;
+      display: block;
+  
+      &:hover {
+        background-color: rgb(220, 247, 233);
+      }
+    }
+  }
+  
+  .dropdown1:hover {
+    .dropdown1-content {
+      display: block;
+    }
+  
+    .dropbtn1 {
+      background-color: #3e8e41;
+    }
+  }

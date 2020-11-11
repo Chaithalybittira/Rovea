@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>YouTube</title>
+  </head>
+  
+  <script>
+   
+    filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current control button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+</script>
+
+
+  <body style="background-color: white;">
+    <nav>
+         <div class="dropdown">
+            <button style="color:black;float: left;margin-left: 2vw;margin-right: 2vw; padding: 1vw;border: none; border-radius: 0%;" class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                &#x2630;
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="fa fa-home" href="index.html">Home</a></li>
+                <li><a class="dropdown-item" href="#">  Library</a></li>
+                <li><a class="dropdown-item" href="#">  Trending</a></li>
+                <li><a class="dropdown-item" href="#">  Subscriptions</a></li>
+                <li><a class="dropdown-item" href="#">  Wishlist</a></li>
+                <li><a class="dropdown-item" href="#">  Saved</a></li>
+                <li><a class="dropdown-item" href="#">  Notifications</a></li>
+            </div>
+          </div>
+
+        <p class="fa fa-youtube-play" style="float: left;font-size: 3vw; color:red;"><p style="color: black; float: left;font-size: 2vw;"><b> YouTube</b></p></p>
+        <div class="dropdown1">
+            <button style="border: none;background-color: transparent;margin-left: 20vw;" class="fa fa-bell"></button>
+            <div class="dropdown1-content" style="padding: 1.5vw;">
+              <a href="#"><img  class="img1"src="g4.jpg" alt="C" style="width:6vw;background-color: black;">Forget not that the earth delights to feel your bare feet and the winds long to play with your hair</a>
+              <a href="#"><img  class="img1"src="i3.jpg" alt="C" style="width:6vw;background-color: black;">Forget not that the earth delights to feel your bare feet and the winds long to play with your hair</a>
+              <a href="#"><img  class="img1"src="i1.jpg" alt="C" style="width:6vw;background-color: black;">Forget not that the earth delights to feel your bare feet and the winds long to play with your hair</a>
+              <a href="#"><img  class="img1"src="g5.jpg" alt="C" style="width:6vw;background-color: black;">Forget not that the earth delights to feel your bare feet and the winds long to play with your hair</a>
+              </div>
+          </div>
+          <div class="dropdown1">
+            <button style="border: none;background-color: transparent;margin-left: 1.2vw;" class="fa fa-th"></button>
+            <div class="dropdown1-content" style="min-width: 2vw;padding: 0.4vw;">
+                <a href="#">YouTube Apps</a>
+             </div>
+        </div>
+        <div class="dropdown1">
+            <button style="border: none;background-color: transparent;margin-left: 1.2vw;" class="fa fa-youtube-play"></button>
+            <div class="dropdown1-content"style="min-width: 2vw;padding: 0.4vw;">
+                <a href="#">Play Videos</a>
+             </div>
+        </div>
+        <div class="dropdown1">
+            <button style="border: none;background-color: transparent;margin-left: 1.2vw;"><img src="myprofile.jpeg" alt="C" style="width:3vw;background-color: black;border-radius: 70%;"></button>
+            <div class="dropdown1-content" style="min-width: 1vw;padding: 0.4vw;">
+              <a href="#">Profile</a>
+             </div>
+        </div>
+        
+      </nav>
+
+<div class="row">
+    <div class="column1" style="background-color: #fdf6f6; margin-left: 1.8vw;">
+            <ul>
+                <li><a class="fa fa-home" href="index.html">Home</a></li>
+                <li><a class="fa fa-youtube-play" href="#">Library</a></li>
+                <li><a class="fa fa-caret-square-o-right" href="#">Subscriptions</a></li>
+                <li><a class="fa fa-pause-circle-o" href="#">Saved</a></li>
+                <li><a class="fa fa-cog" href="#">Settings</a></li>
+                <li><a class="fa fa-thumbs-up" href="#">Liked</a></li> 
+                <li><a class="fa fa-youtube-play" href="#">Library</a></li>
+                <h6 style="padding-top: 0.3vw; font-size: 1vw;"><hr>SUBSCRIPTIONS</h6>
+                <li><a class="fa fa-caret-square-o-right" href="#">Subscriptions</a></li>
+                <li><a class="fa fa-pause-circle-o" href="#">Saved</a></li>
+                <li><a class="fa fa-cog" href="#">Settings</a></li>
+                <li><a class="fa fa-thumbs-up" href="#">Liked</a></li> 
+                <h6 style="padding-top: 0.3vw; font-size: 1vw;"><hr>MORE FROM YouTube</h6>
+                <li><a class="fa fa-caret-square-o-right" href="#">Subscriptions</a></li>
+                <li><a class="fa fa-pause-circle-o" href="#">Saved</a></li>
+                <li><a class="fa fa-cog" href="#">Settings</a></li>
+                <li><a class="fa fa-thumbs-up" href="#">Liked</a></li> 
+              </ul>
+    </div>
+  
+    <div class="column2" style="background-color: rgba(248, 245, 245, 0.973);">
+    <div class="dropdown">
+      <input type="text" id="myInput" onkeyup="myFunction()" style="background-color: lightgoldenrodyellow;" placeholder="Search for Titles.." title="Type in a name"class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a onclick="filterSelection('nature1')">Nature1</a></li>
+          <li><a onclick="filterSelection('nature2')">Nature2</a></li>
+          <li><a  onclick="filterSelection('nature3')">Nature3</a></li>
+          <li><a  onclick="filterSelection('nature4')">Nature4</a></li>
+      </div>
+    </div>
+
+
+    <div class="scrollmenu">
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')" style="  margin-left: 2vwvw;"> Show all</button>
+        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+       <button class="btn" onclick="filterSelection('rain')"> Rain</button>
+        <button class="btn" onclick="filterSelection('diwali')"> Diwali</button> 
+        <button class="btn" onclick="filterSelection('fruit')"> Fruits</button>
+        <button class="btn" onclick="filterSelection('flower')"> Flower</button>
+        <button class="btn" onclick="filterSelection('animal')"> Animals</button>
+        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
+        <button class="btn" onclick="filterSelection('diwali')"> Diwali</button>
+        <button class="btn" onclick="filterSelection('hallow')"> Halloween</button>
+        <button class="btn" onclick="filterSelection('fruit')"> Fruits</button>
+        <button class="btn" onclick="filterSelection('rain')"> Rain</button>
+        <button class="btn" onclick="filterSelection('flower')"> Flower</button>
+        <button class="btn" onclick="filterSelection('animal')"> Animals</button>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4">
+            <div class="col mb-4">
+                <div class="filterDiv nature">
+                <div class="card h-100">
+                    
+                  <div class="box"> 
+                  <video width="100%" height="230vw" controls loop="loop">
+                      <source src="v1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">Nature1</h5>
+                    </div>
+                </div></div>
+              </div></div>
+             
+              <div class="col mb-4">
+                <div class="filterDiv nature">
+                  <div class="card h-100">
+                      <div class="box">
+                    <video width="100%" height="230vw" controls loop="loop">
+                        <source src="v2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                    </video>
+                    <div class="card-body">
+                      <h5 class="card-title">Nature2</h5>
+                      </div>
+                  </div></div>
+                </div></div>
+                
+                <div class="col mb-4">
+                    <div class="filterDiv nature">
+                  <div class="card h-100">
+                      <div class="box">
+                    <video width="100%" height="230vw" controls loop="loop">
+                        <source src="video1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                    </video>
+                    <div class="card-body">
+                      <h5 class="card-title">Nature3 </h5>
+                      </div>
+                  </div></div>
+                </div></div>
+                <div class="col mb-4">
+                    <div class="filterDiv nature">
+                  <div class="card h-100">
+                      <div class="box">
+                    <video width="100%" height="230vw" controls loop="loop">
+                        <source src="v1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                    </video>
+                    <div class="card-body">
+                      <h5 class="card-title">Nature4</h5>
+                      </div>
+                  </div></div>
+                </div></div>
+     </div>   
+    </div>  
+     
+<div class="container">
+        <div class="row row-cols-1 row-cols-md-4">
+            
+            <div class="col mb-4">
+                <div class="filterDiv rain">
+              <div class="card h-100">
+                <div class="box"> 
+                <video width="100%" height="230vw" controls loop="loop">
+                    <source src="r1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                </video>
+                <div class="card-body">
+                  <h5 class="card-title">Rain1 </h5>
+                  </div>
+              </div></div>
+            </div></div>
+           
+            <div class="col mb-4">
+                <div class="filterDiv rain">
+                <div class="card h-100">
+                    <div class="box">
+                  <video width="100%" height="230vw" controls loop="loop">
+                      <source src="r2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">Rain2
+                      
+                  </h5>
+                    </div>
+                </div></div>
+              </div></div>
+              <div class="col mb-4">
+                <div class="filterDiv rain">
+                <div class="card h-100">
+                  <div class="box"> 
+                  <video width="100%" height="230vw" controls loop="loop">
+                      <source src="r1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">Rain3
+                      
+                  </h5>
+                    </div>
+                </div></div>
+              </div></div>
+             
+              <div class="col mb-4">
+                <div class="filterDiv rain">
+                  <div class="card h-100">
+                      <div class="box">
+                    <video width="100%" height="230vw" controls loop="loop">
+                        <source src="r2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                    </video>
+                    <div class="card-body">
+                      <h5 class="card-title">Rain4
+                        
+                    </h5>
+                      </div>
+                  </div></div>
+                </div></div>
+                
+         </div>   
+        </div>
+ 
+<div class="container">
+            <div class="row row-cols-1 row-cols-md-4">
+                
+                <div class="col mb-4">
+                    <div class="filterDiv diwali">
+                  <div class="card h-100">
+                    <div class="box"> 
+                    <video width="100%" height="230vw" controls loop="loop">
+                        <source src="diw1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                    </video>
+                    <div class="card-body">
+                      <h5 class="card-title">Diwali1
+                        
+                    </h5>
+                      </div>
+                  </div></div>
+                </div></div>
+               
+                <div class="col mb-4">
+                    <div class="filterDiv diwali">
+                    <div class="card h-100">
+                      <div class="box"> 
+                      <video width="100%" height="230vw" controls loop="loop">
+                          <source src="diw2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                      </video>
+                      <div class="card-body">
+                        <h5 class="card-title">Diwali2
+                          
+                      </h5>
+                        </div>
+                    </div></div>
+                  </div></div>
+                  <div class="col mb-4">
+                    <div class="filterDiv diwali">
+                    <div class="card h-100">
+                      <div class="box"> 
+                      <video width="100%" height="230vw" controls loop="loop">
+                          <source src="diw1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                      </video>
+                      <div class="card-body">
+                        <h5 class="card-title">Diwali3
+                          
+                      </h5>
+                        </div>
+                    </div></div>
+                  </div></div>
+                  <div class="col mb-4">
+                    <div class="filterDiv diwali">
+                    <div class="card h-100">
+                      <div class="box"> 
+                      <video width="100%" height="230vw" controls loop="loop">
+                          <source src="diw2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                      </video>
+                      <div class="card-body">
+                        <h5 class="card-title">Diwali4
+                          
+                      </h5>
+                        </div>
+                    </div></div>
+                  </div></div>
+             </div>   
+            </div>
+     
+<div class="container">
+            <div class="row row-cols-1 row-cols-md-4">
+                
+                <div class="col mb-4">
+                    <div class="filterDiv flower" >
+                  <div class="card h-100">
+                    <div class="box"> 
+                    <video width="100%" height="230vw" controls loop="loop">
+                        <source src="flw1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                    </video>
+                    <div class="card-body">
+                      <h5 class="card-title">Flower1
+                        
+                    </h5>
+                      </div>
+                  </div></div>
+                </div></div>
+               
+                <div class="col mb-4">
+                    <div class="filterDiv flower">
+                    <div class="card h-100">
+                      <div class="box"> 
+                      <video width="100%" height="230vw" controls loop="loop">
+                          <source src="flw2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                      </video>
+                      <div class="card-body">
+                        <h5 class="card-title">Flower2
+                          
+                      </h5>
+                        </div>
+                    </div></div>
+                  </div></div>
+                  <div class="col mb-4">
+                    <div class="filterDiv flower">
+                    <div class="card h-100">
+                      <div class="box"> 
+                      <video width="100%" height="230vw" controls loop="loop">
+                          <source src="flw1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                      </video>
+                      <div class="card-body">
+                        <h5 class="card-title">Flower3
+                          
+                      </h5>
+                        </div>
+                    </div></div>
+                  </div></div>
+                  <div class="col mb-4">
+                    <div class="filterDiv flower">
+                    <div class="card h-100">
+                      <div class="box"> 
+                      <video width="100%" height="230vw" controls loop="loop">
+                          <source src="flw2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                      </video>
+                      <div class="card-body">
+                        <h5 class="card-title">Flower4
+                         
+                      </h5>
+                        </div>
+                    </div></div>
+                  </div></div>
+        </div>   
+        </div>
+ <div class="container" >
+                <div class="row row-cols-1 row-cols-md-4">
+                    
+                    <div class="col mb-4">
+                        <div class="filterDiv fruit">
+                      <div class="card h-100">
+                        <div class="box" > 
+                        <video width="100%" height="230vw" controls loop="loop">
+                            <source src="fru1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                        </video>
+                        <div class="card-body">
+                          <h5 class="card-title">Fruit1 </h5>
+                          </div>
+                      </div></div>
+                    </div></div>
+                   
+                    <div class="col mb-4">
+                        <div class="filterDiv fruit">
+                        <div class="card h-100">
+                          <div class="box"> 
+                          <video width="100%" height="230vw" controls loop="loop">
+                              <source src="fru1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                          </video>
+                          <div class="card-body">
+                            <h5 class="card-title">Fruit2</h5>
+                            </div>
+                        </div></div>
+                      </div></div>
+                     
+                      <div class="col mb-4">
+                        <div class="filterDiv fruit">
+                        <div class="card h-100">
+                          <div class="box"> 
+                          <video width="100%" height="230vw" controls loop="loop">
+                              <source src="fru1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                          </video>
+                          <div class="card-body">
+                            <h5 class="card-title">Fruit3
+                              
+                          </h5>
+                            </div>
+                        </div></div>
+                      </div></div>
+                     
+                      <div class="col mb-4">
+                        <div class="filterDiv fruit">
+                        <div class="card h-100">
+                          <div class="box"> 
+                          <video width="100%" height="230vw" controls loop="loop">
+                              <source src="fru1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                          </video>
+                          <div class="card-body">
+                            <h5 class="card-title">Fruit4
+                              
+                          </h5>
+                            </div>
+                        </div></div>
+                      </div></div>
+                     
+            </div>   
+            </div>     
+
+
+            
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-1">
+          <div class="col mb-4">
+              <div class="filterDiv nature1">
+              <div class="card h-100">
+                  
+                <div class="box"> 
+                <video width="100%" height="230vw" controls loop="loop">
+                    <source src="v1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                </video>
+                <div class="card-body">
+                  <h5 class="card-title">Nature1</h5>
+                  </div>
+              </div></div>
+            </div></div>
+           
+            <div class="col mb-4">
+              <div class="filterDiv nature2">
+                <div class="card h-100">
+                    <div class="box">
+                  <video width="100%" height="230vw" controls loop="loop">
+                      <source src="v2.mp4" type="video/mp4" class="card-img-top" alt="...">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">Nature2</h5>
+                    </div>
+                </div></div>
+              </div></div>
+              
+              <div class="col mb-4">
+                  <div class="filterDiv nature3">
+                <div class="card h-100">
+                    <div class="box">
+                  <video width="100%" height="230vw" controls loop="loop">
+                      <source src="video1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">Nature3 </h5>
+                    </div>
+                </div></div>
+              </div></div>
+              <div class="col mb-4">
+                  <div class="filterDiv nature4">
+                <div class="card h-100">
+                    <div class="box">
+                  <video width="100%" height="230vw" controls loop="loop">
+                      <source src="v1.mp4" type="video/mp4" class="card-img-top" alt="...">
+                  </video>
+                  <div class="card-body">
+                    <h5 class="card-title">Nature4</h5>
+                    </div>
+                </div></div>
+              </div></div>
+   </div>   
+  </div>  
+
+
+
+ 
+</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+ </body>
+</html>
